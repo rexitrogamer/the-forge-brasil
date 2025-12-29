@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>The Forge | Contas Roblox</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top, #0b0b0b, #000);
+    color: white;
+}
+
+/* ===== HERO ===== */
+.hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    opacity: 0.8;
+    margin-bottom: 25px;
+}
+
+.hero a {
+    background: #00ff88;
+    color: #000;
+    padding: 14px 30px;
+    border-radius: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* ===== SEÇÕES ===== */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 26px;
+    margin-bottom: 40px;
+}
+
+/* ===== CARROSSEL ===== */
+.cards-wrapper {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+
+.cards {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  transition: transform 0.5s ease;
+}
+
+
+
+.cards::-webkit-scrollbar {
+    display: none;
+}
+
+/* ===== SETAS ===== */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #00ff88;
+    color: black;
+    border: none;
+    font-size: 26px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+
+/* ===== CARD ===== */
+.card {
+    width: 320px;
+    flex: 0 0 auto;
+    background: #0f0f0f;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: 0.3s;
+    box-shadow: 0 0 25px rgba(0,0,0,0.7);
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+}
+
+/* ===== IMAGEM ===== */
+.card-image img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+/* ===== CONTEÚDO ===== */
+.card-body {
+    padding: 16px;
+    text-align: center;
+}
+
+.card-body h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.price {
+    color: #00ff88;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.desc {
+    font-size: 14px;
+    opacity: 0.85;
+    margin: 10px 0 15px;
+}
+
+.buy {
+    background: #00ff88;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ===== CORES BLOX BRASIL ===== */
+.fire {
+    box-shadow: 0 0 30px rgba(255,100,0,0.45);
+}
+.ice {
+    box-shadow: 0 0 30px rgba(0,120,255,0.45);
+}
+.toxic {
+    box-shadow: 0 0 30px rgba(0,255,120,0.45);
+}
+
+/* ===== BOTÃO FIXO ===== */
+.discord {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #00ff88;
+    color: black;
+    padding: 14px 22px;
+    border-radius: 999px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.como-funciona {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+
+.subtitle {
+  margin-bottom: 60px;
+}
+.subtitle {
+  font-weight: bold;
+}
+.subtitle {
+  margin-bottom: 40px;
+  font-weight: bold;
+  font-size: 20px;
+}
+</style>
+</head>
+
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Compre sua conta The Forge com segurança</h1>
+    <p>Entrega manual via Discord • Atendimento rápido</p>
+    <a href="https://discord.gg/SEU_LINK_AQUI">Comprar pelo Discord</a>
+</div>
+
+<!-- CONTAS -->
+<div class="section">
+    <h2>CONTAS UPADAS</h2>
+
+<div class="cards-wrapper">
+
+  <button class="arrow left" onclick="scrollCarousel(this, -1)">‹</button>
+
+  <div class="cards" id="contas">
+
+
+
+    <!-- NIVEL 100 -->
+    <div class="card ice">
+      <div class="card-image">
+        <img src="img/100.png">
+      </div>
+      <div class="card-body">
+        <h3>🟢 Conta The Forge – Nível 100</h3>
+        <p class="price">R$ 15,00</p>
+        <p class="desc">Conta inicial upada, ideal para quem quer economizar.</p>
+        <button class="buy" onclick="window.location.href='https://discord.gg/2ca2tMpRNN'">
+  Comprar
+</button>
+      </div>
+    </div>
+
+    <!-- NIVEL 125 -->
+    <div class="card fire">
+      <div class="card-image">
+        <img src="img/125.png">
+      </div>
+      <div class="card-body">
+        <h3>🟡 Conta The Forge – Nível 125</h3>
+        <p class="price">R$ 20,00</p>
+        <p class="desc">Bom progresso no jogo, ótima para começar com vantagem.</p>
+        <button class="buy" onclick="window.location.href='https://discord.gg/2ca2tMpRNN'">
+  Comprar
+</button>
+      </div>
+    </div>
+
+    <!-- NIVEL 135 -->
+    <div class="card toxic">
+      <div class="card-image">
+        <img src="img/135.png">
+      </div>
+      <div class="card-body">
+        <h3>🟠 Conta The Forge – Nível 135</h3>
+        <p class="price">R$ 25,00</p>
+        <p class="desc">Conta bem evoluída, perfeita antes do mid game.</p>
+        <button class="buy" onclick="window.location.href='https://discord.gg/2ca2tMpRNN'">
+  Comprar
+</button>
+      </div>
+    </div>
+
+    <!-- NIVEL 150 -->
+    <div class="card fire">
+      <div class="card-image">
+        <img src="img/150.png">
+      </div>
+      <div class="card-body">
+        <h3>🔥 Conta The Forge – Nível 150</h3>
+        <p class="price">R$ 30,00</p>
+        <p class="desc">Já avançada, boa para quem não quer começar do zero.</p>
+        <button class="buy" onclick="window.location.href='https://discord.gg/2ca2tMpRNN'">
+  Comprar
+</button>
+      </div>
+    </div>
+
+    <!-- NIVEL 175 -->
+    <div class="card ice">
+      <div class="card-image">
+        <img src="img/175.png">
+      </div>
+      <div class="card-body">
+        <h3>⚔️ Conta The Forge – Nível 175</h3>
+        <p class="price">R$ 45,00</p>
+        <p class="desc">Ideal para quem quer jogar mais rápido.</p>
+        <button class="buy" onclick="window.location.href='https://discord.gg/2ca2tMpRNN'">
+  Comprar
+</button>
+
+      </div>
+    </div>
+
+    <!-- NIVEL 200 -->
+<div class="card toxic">
+  <div class="card-image">
+    <img src="img/200.png">
+  </div>
+  <div class="card-body">
+    <h3>👑 Conta The Forge – Nível 200</h3>
+    <p class="price">R$ 70,00</p>
+    <p class="desc">Alto nível, pronta para o endgame.</p>
+    <button class="buy" onclick="window.location.href='https://discord.gg/2ca2tMpRNN'">
+  Comprar
+</button>
+
+  </div>
+</div>
+
+
+
+      </div> <!-- fecha .cards -->
+
+      <button class="arrow right" onclick="scrollCarousel(this, 1)">›</button>
+
+    </div> <!-- fecha .cards-wrapper -->
+</div> <!-- fecha .section -->
+
+
+
+
+
+<!-- UPAR CONTAS -->
+<div class="section">
+    <h2>UPAR CONTAS</h2>
+<div class="cards-wrapper">
+
+<p class="subtitle">UPAMOS SUA CONTA POR UM ÓTIMO PREÇO</p>
+
+
+
+  <button class="arrow left" onclick="scrollCarousel(this, -1)">‹</button>
+
+  <div class="cards up-cards">
+<div class="card ice"><div class="card-image">
+  <img src="img/up10niveis.png" alt="Up +10 níveis">
+</div><div class="card-body"><h3>⬆️ Up +10 níveis</h3><p class="price">R$ 3,00</p><p class="desc">Up rápido e seguro.</p><button class="buy" onclick="window.location.href='https://discord.gg/2ca2tMpRNN'">
+  Solicitar
+</button>
+</div></div>
+
+<div class="card fire"><div class="card-image">
+  <img src="img/up20niveis.png" alt="Up +20 níveis">
+</div>
+<div class="card-body"><h3>⬆️ Up +20 níveis</h3><p class="price">R$ 6,00</p><p class="desc">Progresso acelerado.</p><button class="buy" onclick="window.location.href='https://discord.gg/2ca2tMpRNN'">Solicitar</button></div></div>
+
+<div class="card toxic"><div class="card-image">
+  <img src="img/up30niveis.png" alt="Up +30 níveis">
+</div>
+<div class="card-body"><h3>⬆️ Up +30 níveis</h3><p class="price">R$ 9,00</p><p class="desc">Avanço rápido.</p><button class="buy" onclick="window.location.href='https://discord.gg/2ca2tMpRNN'">Solicitar</button></div></div>
+
+<div class="card ice"><div class="card-image">
+  <img src="img/up40niveis.png" alt="Up +40 níveis">
+</div>
+<div class="card-body"><h3>⬆️ Up +40 níveis</h3><p class="price">R$ 12,00</p><p class="desc">Ótimo custo-benefício.</p><button class="buy" onclick="window.location.href='https://discord.gg/2ca2tMpRNN'">Solicitar</button></div></div>
+
+<div class="card fire"><div class="card-image">
+  <img src="img/up50niveis.png" alt="Up +50 níveis">
+</div>
+<div class="card-body"><h3>⬆️ Up +50 níveis</h3><p class="price">R$ 15,00</p><p class="desc">Acelere seu progresso.</p><button class="buy" onclick="window.location.href='https://discord.gg/2ca2tMpRNN'">Solicitar</button></div></div>
+
+<div class="card toxic"><div class="card-image">
+  <img src="img/up60niveis.png" alt="Up +60 níveis">
+</div>
+<div class="card-body"><h3>⬆️ Up +60 níveis</h3><p class="price">R$ 18,00</p><p class="desc">Avanço consistente.</p><button class="buy" onclick="window.location.href='https://discord.gg/2ca2tMpRNN'">Solicitar</button></div></div>
+
+<div class="card ice"><div class="card-image">
+  <img src="img/up70niveis.png" alt="Up +70 níveis">
+</div>
+<div class="card-body"><h3>⬆️ Up +70 níveis</h3><p class="price">R$ 21,00</p><p class="desc">Mais velocidade no jogo.</p><button class="buy" onclick="window.location.href='https://discord.gg/2ca2tMpRNN'">Solicitar</button></div></div>
+
+<div class="card fire"><div class="card-image">
+  <img src="img/up80niveis.png" alt="Up +80 níveis">
+</div>
+<div class="card-body"><h3>⬆️ Up +80 níveis</h3><p class="price">R$ 24,00</p><p class="desc">Progresso sólido.</p><button class="buy" onclick="window.location.href='https://discord.gg/2ca2tMpRNN'">Solicitar</button></div></div>
+
+<div class="card toxic"><div class="card-image">
+  <img src="img/up90niveis.png" alt="Up +90 níveis">
+</div>
+<div class="card-body"><h3>⬆️ Up +90 níveis</h3><p class="price">R$ 27,00</p><p class="desc">Grande avanço.</p><button class="buy" onclick="window.location.href='https://discord.gg/2ca2tMpRNN'">Solicitar</button></div></div>
+
+<div class="card ice"><div class="card-image">
+  <img src="img/up100niveis.png" alt="Up +100 níveis">
+</div>
+<div class="card-body"><h3>⬆️ Up +100 níveis</h3><p class="price">R$ 30,00</p><p class="desc">Metade do caminho.</p><button class="buy" onclick="window.location.href='https://discord.gg/2ca2tMpRNN'">Solicitar</button></div></div>
+
+<div class="card fire"><div class="card-image">
+  <img src="img/up110niveis.png" alt="Up +110 níveis">
+</div>
+<div class="card-body"><h3>⬆️ Up +110 níveis</h3><p class="price">R$ 33,00</p><p class="desc">Avanço pesado.</p><button class="buy" onclick="window.location.href='https://discord.gg/2ca2tMpRNN'">Solicitar</button></div></div>
+
+<div class="card toxic"><div class="card-image">
+  <img src="img/up120niveis.png" alt="Up +120 níveis">
+</div>
+<div class="card-body"><h3>⬆️ Up +120 níveis</h3><p class="price">R$ 36,00</p><p class="desc">Rumo ao endgame.</p><button class="buy" onclick="window.location.href='https://discord.gg/2ca2tMpRNN'">Solicitar</button></div></div>
+
+<div class="card ice"><div class="card-image">
+  <img src="img/up130niveis.png" alt="Up +130 níveis">
+</div>
+<div class="card-body"><h3>⬆️ Up +130 níveis</h3><p class="price">R$ 39,00</p><p class="desc">Alta progressão.</p><button class="buy" onclick="window.location.href='https://discord.gg/2ca2tMpRNN'">Solicitar</button></div></div>
+
+<div class="card fire"><div class="card-image">
+  <img src="img/up140niveis.png" alt="Up +140 níveis">
+</div>
+<div class="card-body"><h3>⬆️ Up +140 níveis</h3><p class="price">R$ 42,00</p><p class="desc">Quase lá.</p><button class="buy" onclick="window.location.href='https://discord.gg/2ca2tMpRNN'">Solicitar</button></div></div>
+
+<div class="card toxic"><div class="card-image">
+  <img src="img/up150niveis.png" alt="Up +150 níveis">
+</div>
+<div class="card-body"><h3>⬆️ Up +150 níveis</h3><p class="price">R$ 45,00</p><p class="desc">Avanço extremo.</p><button class="buy" onclick="window.location.href='https://discord.gg/2ca2tMpRNN'">Solicitar</button></div></div>
+
+<div class="card ice"><div class="card-image">
+  <img src="img/up160niveis.png" alt="Up +160 níveis">
+</div>
+<div class="card-body"><h3>⬆️ Up +160 níveis</h3><p class="price">R$ 48,00</p><p class="desc">Muito perto do topo.</p><button class="buy" onclick="window.location.href='https://discord.gg/2ca2tMpRNN'">Solicitar</button></div></div>
+
+<div class="card fire"><div class="card-image">
+  <img src="img/up170niveis.png" alt="Up +170 níveis">
+</div>
+<div class="card-body"><h3>⬆️ Up +170 níveis</h3><p class="price">R$ 51,00</p><p class="desc">Endgame se aproximando.</p><button class="buy" onclick="window.location.href='https://discord.gg/2ca2tMpRNN'">Solicitar</button></div></div>
+
+<div class="card toxic"><div class="card-image">
+  <img src="img/up180niveis.png" alt="Up +180 níveis">
+</div>
+<div class="card-body"><h3>⬆️ Up +180 níveis</h3><p class="price">R$ 54,00</p><p class="desc">Quase máximo.</p><button class="buy" onclick="window.location.href='https://discord.gg/2ca2tMpRNN'">Solicitar</button></div></div>
+
+<div class="card ice">
+  <div class="card-image">
+    <img src="img/up190niveis.png" alt="Up +190 níveis">
+  </div>
+  <div class="card-body">
+    <h3>⬆️ Up +190 níveis</h3>
+    <p class="price">R$ 57,00</p>
+    <p class="desc">Últimos passos.</p>
+    <button class="buy" onclick="window.location.href='https://discord.gg/2ca2tMpRNN'">
+      Solicitar
+    </button>
+  </div>
+</div>
+
+<div class="card fire"><div class="card-image">
+  <img src="img/up200niveis.png" alt="Up +200 níveis">
+</div>
+<div class="card-body"><h3>⬆️ Up +200 níveis</h3><p class="price">R$ 60,00</p><p class="desc">Up máximo disponível.</p><button class="buy" onclick="window.location.href='https://discord.gg/2ca2tMpRNN'">Solicitar</button></div></div>
+
+
+
+    
+  </div>
+
+    <button class="arrow right" onclick="scrollCarousel(this, 1)">›</button>
+
+</div>
+
+
+    </div>
+
+  </div>
+
+ 
+
+
+</div>
+
+    
+    </p>
+</div>
+
+<!-- COMO FUNCIONA -->
+<div class="section">
+    <h2>Como funciona</h2>
+
+<div class="como-funciona">
+
+
+
+
+        <p>1️⃣ Escolha a conta desejada</p>
+        <p>2️⃣ Entre no nosso servidor do Discord</p>
+        <p>3️⃣ Vá até o canal <b>#suporte🫂</b></p>
+        <p>4️⃣ Fale com um atendente</p>
+        <p>5️⃣ Pagamento via PIX</p>
+        <p>6️⃣ Receba sua conta na hora 🚀</p>
+    </div>
+</div>
+
+<!-- RODAPÉ -->
+<footer style="text-align:center; padding:30px; opacity:0.6;">
+    © 2025 The Forge • Entrega manual via Discord
+</footer>
+
+
+<!-- BOTÃO DISCORD -->
+<a class="discord" href="https://discord.gg/SEU_LINK_AQUI">Comprar no Discord</a>
+
+
+
+<script>
+const gap = 30;
+
+function scrollCarousel(button, direction) {
+  const wrapper = button.closest('.cards-wrapper');
+  const container = wrapper.querySelector('.cards');
+
+  if (!container || container.classList.contains('animating')) return;
+
+  container.classList.add('animating');
+
+  const card = container.querySelector('.card');
+  const cardWidth = card.offsetWidth + gap;
+
+  container.style.transition = 'none';
+
+  if (direction === 1) {
+    container.appendChild(container.children[0]);
+    container.style.transform = `translateX(${cardWidth}px)`;
+  } else {
+    container.insertBefore(
+      container.children[container.children.length - 1],
+      container.children[0]
+    );
+    container.style.transform = `translateX(-${cardWidth}px)`;
+  }
+
+  container.offsetHeight;
+
+  container.style.transition = 'transform 0.4s ease';
+  container.style.transform = 'translateX(0)';
+
+  setTimeout(() => {
+    container.classList.remove('animating');
+  }, 400);
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
